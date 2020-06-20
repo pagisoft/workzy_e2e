@@ -23,6 +23,10 @@ public class BasicSearchTest {
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
+        System.out.print(
+                "\n _____         _         _____ _             _           _ \n|_   _|       | |       /  ___| |           | |         | |\n  | | ___  ___| |_ ___  \\ `--.| |_ __ _ _ __| |_ ___  __| |\n  | |/ _ \\/ __| __/ __|  `--. \\ __/ _` | '__| __/ _ \\/ _` |\n  | |  __/\\__ \\ |_\\__ \\ /\\__/ / || (_| | |  | ||  __/ (_| |\n  \\_/\\___||___/\\__|___/ \\____/ \\__\\__,_|_|   \\__\\___|\\__,_|\n                                                           \n                                                           \n"
+        );
+
         driver = new ChromeDriver();
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
@@ -53,6 +57,10 @@ public class BasicSearchTest {
         {
             List<WebElement> elements = driver.findElements(By.cssSelector(".search_keywords > #search_keywords"));
             assert (elements.size() > 0);
+
+            System.out.print(
+                    " _______        _         _____                       _ \n |__   __|      | |       |  __ \\                     | |\n    | | ___  ___| |_ ___  | |__) |_ _ ___ ___  ___  __| |\n    | |/ _ \\/ __| __/ __| |  ___/ _` / __/ __|/ _ \\/ _` |\n    | |  __/\\__ \\ |_\\__ \\ | |  | (_| \\__ \\__ \\  __/ (_| |\n    |_|\\___||___/\\__|___/ |_|   \\__,_|___/___/\\___|\\__,_|\n                                                         \n                                                         \n"
+            );
         }
     }
 }
